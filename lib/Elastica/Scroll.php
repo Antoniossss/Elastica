@@ -74,7 +74,7 @@ class Scroll implements \Iterator
 
         $this->_search->setOption(Search::OPTION_SCROLL, $this->expiryTime);
         $this->_search->setOption(Search::OPTION_SCROLL_ID, $this->_nextScrollId);
-        $this->_search->setOption(Search::OPTION_SEARCH_TYPE, Search::OPTION_SEARCH_TYPE_SCROLL);
+//        $this->_search->setOption(Search::OPTION_SEARCH_TYPE, Search::OPTION_SEARCH_TYPE_SCROLL);
         $this->_setScrollId($this->_search->search());
 
         $this->_revertOptions();

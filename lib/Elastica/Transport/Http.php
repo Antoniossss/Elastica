@@ -142,8 +142,9 @@ class Http extends AbstractTransport
         } else {
             curl_setopt($conn, CURLOPT_POSTFIELDS, '');
         }
-
-        curl_setopt($conn, CURLOPT_HTTPHEADER, $headers);
+        if(!empty($headers)){
+            curl_setopt($conn, CURLOPT_HTTPHEADER, $headers);
+        }
 
         curl_setopt($conn, CURLOPT_NOBODY, $httpMethod == 'HEAD');
 
